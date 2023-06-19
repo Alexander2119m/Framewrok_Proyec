@@ -1,0 +1,183 @@
+<h1>Universidad Laica Eloy Alfaro de Manabí</h1>
+<div>
+	<header>
+    <div class="logo">
+		<img src="assets/mi-imagen.png" alt="Descripción de la imagen">
+	  </div>
+		<nav>
+            <ul>
+                <li><a routerLink="/inicio-administrador">Inicio</a></li>
+                <li><a routerLink="/horario-ad">Horario</a></li>
+                <li><a routerLink="/config-horario">Configuracion</a></li>
+                <li><a routerLink="/inicio-sesion">Salir</a></li>
+              </ul>
+		</nav>
+	  </header>
+	<h2>Gestión de Horario</h2>
+  <h3>Configuracion</h3>
+
+  <select id="semestre">
+    <option value="1er Semestre">1er Semestre</option>
+    <option value="2do Semestre">2do Semestre</option>
+    <option value="3er Semestre">3er Semestre</option>
+    <!-- Agrega las opciones necesarias para los semestres -->
+  </select>
+  
+  <select id="dia">
+    <option value="Lunes">Lunes</option>
+    <option value="Martes">Martes</option>
+    <option value="Miércoles">Miércoles</option>
+    <option value="Jueves">Jueves</option>
+    <option value="Viernes">Viernes</option>
+    <!-- Agrega las opciones necesarias para los días -->
+  </select>
+  
+  <select id="hora">
+    <option value="8:00am - 10:00am">8:00am - 10:00am</option>
+    <option value="10:00am - 12:00pm">10:00am - 12:00pm</option>
+    <option value="2:00pm - 4:00pm">2:00pm - 4:00pm</option>
+    <!-- Agrega las opciones necesarias para las horas -->
+  </select>
+  
+  <input type="text" id="Asignatura" placeholder="Asignatura">
+  
+  <input type="text" id="profesor" placeholder="Profesor">
+  
+  <table id="tablaHorario">
+    <!-- Aquí se mostrarán las filas dinámicamente -->
+  </table>
+  <button (click)="agregarRegistro()">Agregar</button>
+
+  <table id="tablaHorario">
+    <thead>
+      <tr>
+        <th>Semestre</th>
+        <th>Día</th>
+        <th>Hora</th>
+        <th>Asignatura</th>
+        <th>Profesor</th>
+        <th></th>
+        <th>Acciones</th>
+      </tr>
+    </thead>
+    <tbody id="tabla-horario">
+      <tr>
+        <td>1er Semestre</td>
+        <td>Lunes</td>
+        <td>8:00am - 10:00am</td>
+        <td>Fundamentos de tecnologías de la información</td>
+        <td>ING Garcia Macias Viviana Katiuska</td>
+        <td></td>
+        <td>
+          <button (click)="editarRegistro($event)">Editar</button>
+          <button (click)="eliminarRegistro($event)">Eliminar</button>
+        </td>
+      </tr>
+      <tr>
+        <td>1er Semestre</td>
+        <td>Lunes</td>
+        <td>10:00am - 12:00pm</td>
+        <td>Fisica General</td>
+        <td>ING Walter García</td>
+        <td></td>
+        <td>
+          <button (click)="editarRegistro($event)">Editar</button>
+          <button (click)="eliminarRegistro($event)">Eliminar</button>
+        </td>
+      </tr>
+      <tr>
+        <td>1er Semestre</td>
+        <td>Martes</td>
+        <td>8:00am - 10:00am</td>
+        <td>Metodología de la Investigación</td>
+        <td>PHD.Muñoz Verduga Dolores Esperanza</td>
+        <td></td>
+        <td>
+          <button (click)="editarRegistro($event)">Editar</button>
+          <button (click)="eliminarRegistro($event)">Eliminar</button>
+        </td>
+      </tr>
+      <tr>
+        <td>1er Semestre</td>
+        <td>Martes</td>
+        <td>10:00am - 12:00pm</td>
+        <td>Algebra Lineal</td>
+        <td>Ing Mero Briones Henry Neurio </td>
+        <td></td>
+        <td>
+          <button (click)="editarRegistro($event)">Editar</button>
+          <button (click)="eliminarRegistro($event)">Eliminar</button>
+        </td>
+      </tr>
+      <tr>
+        <td>1er Semestre</td>
+        <td>Miercoles</td>
+        <td>8:00am - 10:00am</td>
+        <td>Fisica General</td>
+        <td>ING Walter Garcia</td>
+        <td></td>
+        <td>
+          <button (click)="editarRegistro($event)">Editar</button>
+          <button (click)="eliminarRegistro($event)">Eliminar</button>
+        </td>
+      </tr>
+      <tr>
+        <td>1er Semestre</td>
+        <td>Miercoles</td>
+        <td>10:00am - 12:00pm</td>
+        <td>Fundamentos de Programacion </td>
+        <td>ING Franco Pico Armando Gilberto</td>
+        <td></td>
+        <td>
+          <button (click)="editarRegistro($event)">Editar</button>
+          <button (click)="eliminarRegistro($event)">Eliminar</button>
+        </td>
+      </tr>
+      <tr>
+        <td>1er Semestre</td>
+        <td>Jueves</td>
+        <td>8:00am - 10:00am</td>
+        <td>Metodología de la Investigación</td>
+        <td>PHD.Muñoz Verduga Dolores Esperanza</td>
+        <td></td>
+        <td>
+          <button (click)="editarRegistro($event)">Editar</button>
+          <button (click)="eliminarRegistro($event)">Eliminar</button>
+        </td>
+      </tr>
+      <tr>
+        <td>1er Semestre</td>
+        <td>Jueves</td>
+        <td>10:00am - 12:00pm</td>
+        <td>Fundamentos de tecnologías de la información</td>
+        <td>ING Garcia Macias Viviana Katiuska</td>
+        <td></td>
+        <td>
+          <button (click)="editarRegistro($event)">Editar</button>
+          <button (click)="eliminarRegistro($event)">Eliminar</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  <div id="toastContainer" class="toast-container">
+  </div>
+</div>
+<div class="alerta"></div>
+
+
+
+
+
+
+
+
+
+
+  
+  
+
+
+  
+
+
+  

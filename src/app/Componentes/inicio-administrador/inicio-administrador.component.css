@@ -1,0 +1,72 @@
+
+/*Cabezera*/
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  background-color: #20996b;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+h1 {
+  font-size: 36px;
+  text-align: center;
+  margin-top: 40px;
+  
+  font-size: 24px;
+  color: black;
+  margin: 1px;
+  padding: 10px;
+ 
+}
+
+.logo img {
+  height: 3rem;
+}
+
+nav ul {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+nav ul li {
+  margin-left: 1rem;
+}
+
+nav ul li:first-child {
+  margin-left: 0;
+}
+
+nav a {
+  display: block;
+  padding: 0.5rem;
+  color: #333333;
+  text-decoration: none;
+  transition: color 0.2s ease-in-out;
+}
+
+nav a:hover {
+  color: #0066cc;
+}
+
+
+.container {
+  width: 80%;
+  margin: 0 auto;
+  background-color: white;
+  padding: 150px;
+  border: 1px solid #ccc;
+}
+
+footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: #333;
+  text-align: center;
+  padding: 10px;
+  color: #fff;
+}
+
